@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "name": "Pikachu",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/3/3b/SpongeBob_SquarePants_character.svg",
+      "picked": false
+    },
+    {
+      "id": 2,
+      "name": "Squirtle",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/en/3/3b/SpongeBob_SquarePants_character.svg",
+      "picked": false
+    }
+
+  ]
+  
