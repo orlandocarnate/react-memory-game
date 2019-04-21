@@ -3,15 +3,73 @@
       "id": 1,
       "name": "Pikachu",
       "image":
-        "https://upload.wikimedia.org/wikipedia/en/3/3b/SpongeBob_SquarePants_character.svg",
-      "picked": false
+        "./images/attata.png"
     },
     {
       "id": 2,
-      "name": "Squirtle",
+      "name": "Pikachu",
       "image":
-        "https://upload.wikimedia.org/wikipedia/en/3/3b/SpongeBob_SquarePants_character.svg",
-      "picked": false
+        "./images/bulbasaur.png"
+    },
+    {
+      "id": 3,
+      "name": "Pikachu",
+      "image":
+        "./images/chansey.png"
+    },
+    {
+      "id": 4,
+      "name": "Pikachu",
+      "image":
+        "./images/charmander.png"
+    },
+    {
+      "id": 5,
+      "name": "Pikachu",
+      "image":
+        "./images/clefairy.png"
+    },
+    {
+      "id": 6,
+      "name": "Pikachu",
+      "image":
+        "./images/cubone.png"
+    },
+    {
+      "id": 7,
+      "name": "Pikachu",
+      "image":
+        "./images/eevee.png"
+    },
+    {
+      "id": 8,
+      "name": "Pikachu",
+      "image":
+        "./images/farfetch_d.png"
+    },
+    {
+      "id": 9,
+      "name": "Pikachu",
+      "image":
+        "./images/magikarp.png"
+    },
+    {
+      "id": 10,
+      "name": "Pikachu",
+      "image":
+        "./images/mewtwo.png"
+    },
+    {
+      "id": 11,
+      "name": "Pikachu",
+      "image":
+        "./images/pikachu.png"
+    },
+    {
+      "id": 12,
+      "name": "Pikachu",
+      "image":
+        "./images/squirtle.png"
     }
 
   ]
