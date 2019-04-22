@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import './App.css';
 import CardContainer from "./components/CardContainer";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import Title from "./components/title";
 import PokeCard from "./components/PokeCard";
 import pokemon from './pokemon.json';
@@ -26,10 +26,10 @@ class App extends Component {
     // check to see if clicked pokemon has been clicked before
     if (this.state.pokemon[selectedIndex].clicked) {
       // GAME OVER
-      this.setState({ 
-        classState: "hvr-buzz-out", 
+      this.setState({
+        classState: "hvr-buzz-out",
         status: "You picked that already! You lose!",
-        pokemon: shuffle(this.state.pokemon.map(item => { item.clicked = false; return item})),
+        pokemon: shuffle(this.state.pokemon.map(item => { item.clicked = false; return item })),
         score: 0
       });
 
@@ -48,12 +48,12 @@ class App extends Component {
       })
 
       // increment score by 1
-        this.setState({ 
-          classState: "",
-          status: "I choose you!",
-          score: this.state.score + 1,
-          pokemon: shuffle(tempState)
-         }); 
+      this.setState({
+        classState: "",
+        status: "I choose you!",
+        score: this.state.score + 1,
+        pokemon: shuffle(tempState)
+      });
     }
     // this.setState({ pokemon: shuffle(this.state.pokemon) });
   }
@@ -68,13 +68,15 @@ class App extends Component {
   // Pass a function to each card to update the Parent(App.js) state.
   render() {
     return (
-      <div className="App container">
+      <React.Fragment>
         <Navbar status={this.state.status} score={this.state.score} topscore={this.state.topscore} />
-        <Title title="Clicky Memory Game" />
-        <CardContainer classState={this.state.classState}>
-          {this.state.pokemon.map(item => <PokeCard key={item.id} id={item.id} pickedCard={this.pickedCard} image={item.image} />)}
-        </CardContainer>
-      </div>
+        <div className="App container">
+          <Title title="Clicky Memory Game" />
+          <CardContainer classState={this.state.classState}>
+            {this.state.pokemon.map(item => <PokeCard key={item.id} id={item.id} pickedCard={this.pickedCard} image={item.image} />)}
+          </CardContainer>
+        </div>
+      </React.Fragment>
     );
   }
 }
