@@ -13,28 +13,31 @@ class App extends Component {
     score: 0
   }
 
-  // method for shuffling cards
+  // TODO method for shuffling cards
 
   // method for changing card's 'picked' state to true if clicked
   pickedCard = id => {
     // change state of pokemon picked to true
     // this.setState({
-    //   pokemon: {
-    //     id: id,
-    //     picked: true
-    //   }
-    // })
-    console.log(id);
-    this.setState({pokemon: shuffle(this.state.pokemon)});
+    // this.setState(this.state.pokemon[id]['clicked'] = true);
+    const selectedIndex = this.state.pokemon.findIndex( item => item.id === id);
+
+    // change state to true
+    this.state.pokemon[selectedIndex].clicked = true;
+    // console.log("Clicked pokemon: ", this.state.pokemon[selectedIndex]);
+    // console.log("Clicked state: ", this.state.pokemon[selectedIndex].clicked);
+    console.log("Clicked pokemon to True: ", this.state.pokemon.filter( item => item.clicked === true));
+    this.setState({ pokemon: shuffle(this.state.pokemon) });
   }
 
   componentDidMount() {
-    this.setState({pokemon: shuffle(this.state.pokemon)});
+    this.setState({ pokemon: shuffle(this.state.pokemon) });
 
   }
 
-  // reset picked to false, score to 0 then reload cards
+  // TODO reset picked to false, score to 0 then reload cards
 
+  // Pass a function to each card to update the Parent(App.js) state.
   render() {
     return (
       <div className="App">

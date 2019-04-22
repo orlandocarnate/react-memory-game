@@ -1,76 +1,74 @@
 [
-    {
-      "id": 1,
-      "name": "Pikachu",
-      "image":
-        "./images/attata.png"
-    },
-    {
-      "id": 2,
-      "name": "Pikachu",
-      "image":
-        "./images/bulbasaur.png"
-    },
-    {
-      "id": 3,
-      "name": "Pikachu",
-      "image":
-        "./images/chansey.png"
-    },
-    {
-      "id": 4,
-      "name": "Pikachu",
-      "image":
-        "./images/charmander.png"
-    },
-    {
-      "id": 5,
-      "name": "Pikachu",
-      "image":
-        "./images/clefairy.png"
-    },
-    {
-      "id": 6,
-      "name": "Pikachu",
-      "image":
-        "./images/cubone.png"
-    },
-    {
-      "id": 7,
-      "name": "Pikachu",
-      "image":
-        "./images/eevee.png"
-    },
-    {
-      "id": 8,
-      "name": "Pikachu",
-      "image":
-        "./images/farfetch_d.png"
-    },
-    {
-      "id": 9,
-      "name": "Pikachu",
-      "image":
-        "./images/magikarp.png"
-    },
-    {
-      "id": 10,
-      "name": "Pikachu",
-      "image":
-        "./images/mewtwo.png"
-    },
-    {
-      "id": 11,
-      "name": "Pikachu",
-      "image":
-        "./images/pikachu.png"
-    },
-    {
-      "id": 12,
-      "name": "Pikachu",
-      "image":
-        "./images/squirtle.png"
-    }
-
-  ]
-  
+  {
+    "id": 1,
+    "name": "Attata",
+    "image": "./images/attata.png",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "name": "Bulbasaur",
+    "image": "./images/bulbasaur.png",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "name": "Chansey",
+    "image": "./images/chansey.png",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "name": "Charmander",
+    "image": "./images/charmander.png",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "name": "Clefairy",
+    "image": "./images/clefairy.png",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "name": "Cubone",
+    "image": "./images/cubone.png",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "name": "Eevee",
+    "image": "./images/eevee.png",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "name": "Farfetch",
+    "image": "./images/farfetch_d.png",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "name": "Magikarp",
+    "image": "./images/magikarp.png",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "name": "Mewtwo",
+    "image": "./images/mewtwo.png",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "name": "Pikachu",
+    "image": "./images/pikachu.png",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "name": "Squirtle",
+    "image": "./images/squirtle.png",
+    "clicked": false
+  }
+]
