@@ -10,23 +10,47 @@ import shuffle from './components/shuffle';
 class App extends Component {
   state = {
     pokemon,
-    score: 0
+    score: 0,
+    topscore: 0,
+    status: 'Click a Pokemon to Begin Game!'
   }
 
   // TODO method for shuffling cards
 
   // method for changing card's 'picked' state to true if clicked
   pickedCard = id => {
-    // change state of pokemon picked to true
-    // this.setState({
-    // this.setState(this.state.pokemon[id]['clicked'] = true);
-    const selectedIndex = this.state.pokemon.findIndex( item => item.id === id);
+    // find the index of the clicked pokemon based on the pokemon's ID using .findIndex()
+    const selectedIndex = this.state.pokemon.findIndex(item => item.id === id);
 
-    // change state to true
-    this.state.pokemon[selectedIndex].clicked = true;
-    // console.log("Clicked pokemon: ", this.state.pokemon[selectedIndex]);
-    // console.log("Clicked state: ", this.state.pokemon[selectedIndex].clicked);
-    console.log("Clicked pokemon to True: ", this.state.pokemon.filter( item => item.clicked === true));
+    // check to see if clicked pokemon has been clicked before
+    if (this.state.pokemon[selectedIndex].clicked) {
+      // GAME OVER
+      this.setState({ status: "You picked that already! You lose!" });
+
+      // reset pokemon list
+      this.setState({ pokemon: this.state.pokemon.map(item => item.clicked = false) });
+      console.log("RESET: ", this.state.pokemon);
+
+      if (this.state.score > this.state.topscore) {
+        this.setState({ topscore: this.state.score });
+      }
+      this.setState({ score: 0 });  // reset score to 0
+    } else {
+      this.setState({ status: "I choose you!" });
+      // increment score by 1
+      this.setState({ score: this.state.score + 1 });
+
+      // change state to true
+      const tempState = this.state.pokemon.map(item => {
+        if (item.id === id) {
+          item.clicked = true;
+        }
+        return item
+      })
+      this.setState({ pokemon: tempState });
+
+
+    }
     this.setState({ pokemon: shuffle(this.state.pokemon) });
   }
 
@@ -41,7 +65,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
+        <Navbar status={this.state.status} score={this.state.score} topscore={this.state.topscore} />
         <Title title="Clicky Memory Game" />
         <CardContainer>
           {this.state.pokemon.map(item => <PokeCard key={item.id} id={item.id} pickedCard={this.pickedCard} image={item.image} />)}

@@ -2,7 +2,7 @@
 // https://github.com/coolaj86/knuth-shuffle
 function shuffle(props) {
     // reset shuffledArray array
-    console.log("this.state.pokemon: ", props)
+    // console.log("this.state.pokemon: ", props)
     const shuffledArray = props;
     // const numCards = 12;
     // for (var i = 0; i < numCards; i++) {
@@ -17,7 +17,7 @@ function shuffle(props) {
         shuffledArray[i] = shuffledArray[randomIndex]; // copy random index to current index i in array
         shuffledArray[randomIndex] = tempIndex; // copy temp index to random index
     }
-    console.log("Shuffled Array: ", shuffledArray);
+    // console.log("Shuffled Array: ", shuffledArray);
     
     return shuffledArray;
 }

@@ -4,7 +4,7 @@ import React from 'react';
 function Title (props) {
     return (
       <div>
-        <h1>{props.title}</h1>
+        <h1 className="text-center"><img alt='Pokemon Logo' src='./images/pokemon-logo.svg' /> {props.title}</h1>
       </div>
     );
 }
