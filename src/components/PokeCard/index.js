@@ -7,7 +7,7 @@ function PokeCard(props) {
   return (
     <div className="col-sm-3 mb-4">
       {/* when clicked, we update the state in App compoonet */}
-      <div className="card" onClick={() => props.pickedCard(props.id)}>
+      <div className="card hvr-grow" onClick={() => props.pickedCard(props.id)}>
         <div className="img-container">
           <img
             className="card-img"

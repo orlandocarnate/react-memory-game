@@ -12,7 +12,8 @@ class App extends Component {
     pokemon,
     score: 0,
     topscore: 0,
-    status: 'Click a Pokemon to Begin Game!'
+    status: 'Click a Pokemon to Begin Game!',
+    classState: ""
   }
 
   // TODO method for shuffling cards
@@ -25,33 +26,36 @@ class App extends Component {
     // check to see if clicked pokemon has been clicked before
     if (this.state.pokemon[selectedIndex].clicked) {
       // GAME OVER
-      this.setState({ status: "You picked that already! You lose!" });
+      this.setState({ 
+        classState: "hvr-buzz-out", 
+        status: "You picked that already! You lose!",
+        pokemon: shuffle(this.state.pokemon.map(item => { item.clicked = false; return item})),
+        score: 0
+      });
 
       // reset pokemon list
-      this.setState({ pokemon: this.state.pokemon.map(item => item.clicked = false) });
-      console.log("RESET: ", this.state.pokemon);
-
       if (this.state.score > this.state.topscore) {
         this.setState({ topscore: this.state.score });
       }
-      this.setState({ score: 0 });  // reset score to 0
-    } else {
-      this.setState({ status: "I choose you!" });
-      // increment score by 1
-      this.setState({ score: this.state.score + 1 });
-
-      // change state to true
+    }
+    else {
+      // change state to true by updating pokemon list
       const tempState = this.state.pokemon.map(item => {
         if (item.id === id) {
           item.clicked = true;
         }
         return item
       })
-      this.setState({ pokemon: tempState });
 
-
+      // increment score by 1
+        this.setState({ 
+          classState: "",
+          status: "I choose you!",
+          score: this.state.score + 1,
+          pokemon: shuffle(tempState)
+         }); 
     }
-    this.setState({ pokemon: shuffle(this.state.pokemon) });
+    // this.setState({ pokemon: shuffle(this.state.pokemon) });
   }
 
   componentDidMount() {
@@ -64,10 +68,10 @@ class App extends Component {
   // Pass a function to each card to update the Parent(App.js) state.
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <Navbar status={this.state.status} score={this.state.score} topscore={this.state.topscore} />
         <Title title="Clicky Memory Game" />
-        <CardContainer>
+        <CardContainer classState={this.state.classState}>
           {this.state.pokemon.map(item => <PokeCard key={item.id} id={item.id} pickedCard={this.pickedCard} image={item.image} />)}
         </CardContainer>
       </div>
