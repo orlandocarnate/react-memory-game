@@ -8,14 +8,42 @@ body {
 }
 
 /* Pokemon font */
+
 @font-face {
-  font-family: 'Pokemon  Solid';
-  src: url('http://www.fontsaddict.com/fontface/pokemon-solid.TTF');
+  font-family: 'pokemon';
+  src: url('http://www.fontsaddict.com/download/pokemon-solid.TTF') format('truetype');
 }
+
+@font-face {
+  font-family: "Pokemon";
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff") format("woff"), url("https://db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon") format("svg");
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #ffcb05;
+  font-family: 'pokemon';
+}
+
+
 h1 {
-  font-family: 'Pokemon  Solid';
+  color: #3563ad;
+  /* color: #ffcb05; */
+  /* text-shadow: 10px 10px #3563ad; */
+  /* border: 5px solid #3563ad; */
+}
+.nav-item {
+  text-shadow: 5px 5px black;
+}
+a.nav-item{
+  color: #ffcb05;
+}
+a.nav-item:hover{
+  text-decoration: none;
+  text-shadow: 5px 5px white;
+
 }

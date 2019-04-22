@@ -2,31 +2,18 @@ import React from 'react';
 import "./style.css";
 function Navbar(props) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light mb-3">
+    <div className="nav-bg py-4">
       <div className="container">
-        <a className="navbar-brand" href="/">Navbar</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-            </li>
-            <li className="nav-item">
-              <div className="nav-link">{props.status}</div>
-            </li>
-            <li className="nav-item">
-              <div className="nav-link">Score: <span>{props.score}</span></div>
-            </li>
-            <li className="nav-item">
-              <div className="nav-link">Top Score: <span>{props.topscore}</span></div>
-            </li>
-
-          </ul>
-        </div>
+        <nav className="nav d-flex justify-content-between">
+          <h3><a className="nav-item align-self-start" href="/">Home <span className="sr-only">(current)</span></a></h3>
+          <h3 className="nav-item align-self-center">{props.status}</h3>
+          <div className="align-self-end">
+            <h5 className="nav-item">Score: <span>{props.score}</span></h5>
+            <h5 className="nav-item">Top Score: <span>{props.topscore}</span></h5>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </div>
   );
 }
 
