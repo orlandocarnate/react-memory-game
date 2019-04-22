@@ -2,7 +2,7 @@ import React from 'react';
 import "./style.css";
 function Navbar(props) {
   return (
-    <div className="nav-bg py-4">
+    <div className="nav-bg py-2">
       <div className="container">
         <nav className="nav d-flex justify-content-between">
           <h3><a className="nav-item align-self-start" href="/">Home <span className="sr-only">(current)</span></a></h3>
