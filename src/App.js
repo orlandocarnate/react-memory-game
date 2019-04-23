@@ -29,7 +29,7 @@ class App extends Component {
       // GAME OVER
       this.setState({
         classState: "hvr-buzz-out",
-        statusState: "hvr-buzz-out text-danger",
+        statusState: "hvr-buzz-out text-warning",
         status: `You picked ${this.state.pokemon[selectedIndex].name} already! Try Again!`,
         pokemon: shuffle(this.state.pokemon.map(item => { item.clicked = false; return item })),
         score: 0
