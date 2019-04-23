@@ -36,14 +36,3 @@ h1 {
   /* text-shadow: 10px 10px #3563ad; */
   /* border: 5px solid #3563ad; */
 }
-.nav-item {
-  text-shadow: 5px 5px black;
-}
-a.nav-item{
-  color: #ffcb05;
-}
-a.nav-item:hover{
-  text-decoration: none;
-  text-shadow: 5px 5px white;
-
-}

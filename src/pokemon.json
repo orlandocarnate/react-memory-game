@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Attata",
-    "image": "./images/attata.png",
+    "name": "Rattata",
+    "image": "./images/rattata.png",
     "clicked": false
   },
   {
