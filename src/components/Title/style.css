@@ -1,0 +1,24 @@
+.logo {
+    max-height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 540px) {
+    .logo {
+        max-height: 50px;
+        object-fit: cover;
+    }
+    .title {
+        font-size: .5em;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+        max-height: 30px;
+        object-fit: cover;
+    }
+    .title {
+        font-size: .35em;
+    }
+}

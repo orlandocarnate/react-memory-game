@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import './App.css';
 import CardContainer from "./components/CardContainer";
 import Navbar from "./components/Navbar";
-import Title from "./components/title";
+import Title from "./components/Title";
 import PokeCard from "./components/PokeCard";
 import pokemon from './pokemon.json';
 import shuffle from './components/shuffle';
@@ -13,7 +13,8 @@ class App extends Component {
     score: 0,
     topscore: 0,
     status: 'Click a Pokemon to Begin Game!',
-    classState: ""
+    classState: "",
+    statusState: ""
   }
 
   // TODO method for shuffling cards
@@ -28,7 +29,8 @@ class App extends Component {
       // GAME OVER
       this.setState({
         classState: "hvr-buzz-out",
-        status: "You picked that already! You lose!",
+        statusState: "hvr-buzz-out text-danger",
+        status: `You picked ${this.state.pokemon[selectedIndex].name} already! You lose!`,
         pokemon: shuffle(this.state.pokemon.map(item => { item.clicked = false; return item })),
         score: 0
       });
@@ -50,12 +52,27 @@ class App extends Component {
       // increment score by 1
       this.setState({
         classState: "",
-        status: "I choose you!",
+        statusState: "",
+        status: `I choose you, ${this.state.pokemon[selectedIndex].name}!`,
         score: this.state.score + 1,
         pokemon: shuffle(tempState)
-      });
+      }
+        // set a CALLBACK to see if score reaches 12
+        , function () {
+          if (this.state.score === 2) {
+            this.setState({
+              topscore: this.state.score,
+              classState: "hvr-buzz-out",
+              statusState: "hvr-buzz-out text-success",
+              status: `You Won! You got the max score! Let's Play Again!`,
+              score: 0,
+              pokemon: shuffle(this.state.pokemon.map(item => { item.clicked = false; return item }))
+            });
+          }
+
+        });
     }
-    // this.setState({ pokemon: shuffle(this.state.pokemon) });
+    // if player gets the max 12, player wins round!
   }
 
   componentDidMount() {
@@ -69,10 +86,10 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar status={this.state.status} score={this.state.score} topscore={this.state.topscore} />
+        <Navbar statusState={this.state.statusState} status={this.state.status} score={this.state.score} topscore={this.state.topscore} />
         <div className="App container">
           <Title title="Clicky Memory Game" />
-          <CardContainer classState={this.state.classState}>
+          <CardContainer className="d-flex align-items-center" classState={this.state.classState}>
             {this.state.pokemon.map(item => <PokeCard key={item.id} id={item.id} pickedCard={this.pickedCard} image={item.image} />)}
           </CardContainer>
         </div>

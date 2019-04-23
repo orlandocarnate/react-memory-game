@@ -2,3 +2,29 @@
     background-color: #3563ad;
     /* padding: 10px 0; */
 }
+
+@media (max-width: 480px) {
+
+    .nav-item {
+        font-size: .5em;
+    }
+    h3.nav-item {
+        font-size: .75em;
+    }
+    a.nav-item {
+        font-size: .35em;
+    }
+}
+
+/* @media (max-width: 320px) {
+
+    .nav-item {
+        font-size: .5em;
+    }
+    h3.nav-item {
+        font-size: .75em;
+    }
+    a.nav-item {
+        font-size: .35em;
+    }
+} */

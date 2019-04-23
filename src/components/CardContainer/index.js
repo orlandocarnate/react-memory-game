@@ -5,7 +5,7 @@ function CardContainer(props) {
 
   return (
     <div className={props.classState}>
-      <div className="row">
+      <div className="row d-flex justify-content-center">
         {props.children}
       </div>
     </div>
