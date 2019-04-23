@@ -41,14 +41,14 @@ a.nav-item:hover {
 
 @media (max-width: 480px) {
     .pokeball {
-        width: 50px;
+        width: 30px;
         height: 100%;
         padding-right: 5px;
     }
     .status {
-        font-size: .6em;
+        font-size: .7em;
     }
     .scores {
-        font-size: .75em;
+        font-size: .9em;
     }
 }

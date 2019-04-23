@@ -15,7 +15,7 @@ function Navbar(props) {
           </li>
           <li className="d-flex flex-sm-row align-self-end">
             <h5 className="scores nav-item">Score: <span>{props.score}</span></h5>
-            <h5 className="scores nav-item ml-2">Top Score: <span>{props.topscore}</span></h5>
+            <h5 className="scores nav-item ml-3">Top Score: <span>{props.topscore}</span></h5>
           </li>
         </ul>
       </div>
