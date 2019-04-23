@@ -59,7 +59,7 @@ class App extends Component {
       }
         // set a CALLBACK to see if score reaches 12
         , function () {
-          if (this.state.score === 2) {
+          if (this.state.score === 12) {
             this.setState({
               topscore: this.state.score,
               classState: "hvr-buzz-out",
