@@ -5,7 +5,7 @@
 
 @media (max-width: 540px) {
     .logo {
-        max-height: 50px;
+        max-height: 40px;
         object-fit: cover;
     }
     .title {
@@ -15,10 +15,10 @@
 
 @media (max-width: 320px) {
     .logo {
-        max-height: 30px;
+        max-height: 20px;
         object-fit: cover;
     }
     .title {
-        font-size: .35em;
+        font-size: .25em;
     }
 }
