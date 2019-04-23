@@ -22,20 +22,6 @@ a.nav-item:hover {
     padding-right: 5px;
 }
 
-@media (max-width: 480px) {
-    .pokeball {
-        width: 40px;
-        height: 100%;
-        padding-right: 5px;
-    }
-    .status {
-        font-size: .6em;
-    }
-    .scores {
-        font-size: .65em;
-    }
-}
-
 .hvr-pokeball-grow {
     display: inline-block;
     vertical-align: middle;
@@ -51,4 +37,18 @@ a.nav-item:hover {
 .hvr-pokeball-grow:hover, .hvr-grow:focus, .hvr-grow:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .pokeball {
+        width: 50px;
+        height: 100%;
+        padding-right: 5px;
+    }
+    .status {
+        font-size: .6em;
+    }
+    .scores {
+        font-size: .75em;
+    }
 }
