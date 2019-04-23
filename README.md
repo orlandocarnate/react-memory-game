@@ -1,4 +1,4 @@
-# Clicky Pokemon Game
+# Clicky Pokemon Game - [React Site](http://oc-clicky-game.herokuapp.com/)
 A memory style game. Each time you click on a Pokemon, the cards will shuffle and your score increases by 1. If you click on the same Pokemon twice, you lose! If your score beat the top score it will become the new top score, and the current score resets to 0.
 
 ## Technologies/Frameworks used:
