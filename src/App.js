@@ -12,7 +12,7 @@ class App extends Component {
     pokemon,
     score: 0,
     topscore: 0,
-    status: 'Click a Pokemon to Begin Game!',
+    status: 'Try not to pick the same Pokemon twice!',
     classState: "",
     statusState: ""
   }
